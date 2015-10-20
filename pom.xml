@@ -57,8 +57,8 @@
         </dependency>
         <dependency>
             <groupId>moe.pizza</groupId>
-            <artifactId>eveapi</artifactId>
-            <version>0.6</version>
+            <artifactId>eveapi_${scalaBinaryVersion}</artifactId>
+            <version>0.13</version>
         </dependency>
     </dependencies>
 
@@ -109,9 +109,12 @@
 
     <repositories>
         <repository>
-            <id>andimiller-bintray</id>
-            <name>andimiller bintray</name>
-            <url>https://dl.bintray.com/andimiller/maven/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>bintray</name>
+            <url>http://jcenter.bintray.com</url>
         </repository>
     </repositories>
 

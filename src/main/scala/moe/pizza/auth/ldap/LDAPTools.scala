@@ -31,7 +31,7 @@ class LDAPTools(config: AuthConfig) {
       }
     } catch {
       case l: LDAPException => conn.close(); false
-      case _ => conn.close(); false
+      case _: Throwable => conn.close(); false
     }
   }
 
